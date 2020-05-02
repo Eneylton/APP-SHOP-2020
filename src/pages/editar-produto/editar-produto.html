@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Editar produto</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-fab top right edge>
+    <button color="danger" ion-fab mini (click)="editar()">
+      <ion-icon  name="md-checkmark"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <ion-list style="margin-top: 20px;">
+<ion-item>
+  
+       <img style="max-width: 70%; margin-left: 40px;" src="{{url+foto}}" *ngIf="base64Image == ''"   >
+       <img style="max-width: 70%; margin-left: 50px;" src="{{base64Image}}" *ngIf="base64Image != ''"   >
+
+</ion-item>
+
+    
+
+    <div>
+      <button ion-button block (click)="presentActionSheet()" color="danger">Enviar Foto</button>
+    </div>  
+      
+    
+  
+    <ion-item>
+      <ion-input type="text" placeholder="Nome" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="Website" [(ngModel)]="website"></ion-input>
+    </ion-item>
+    <ion-item>
+
+      <ion-item>
+        <ion-input type="text"  [(ngModel)]="money" placeholder="Preço" [brmasker]="{money: true, thousand: '.',  decimalCaracter: ',', decimal: '2'}"></ion-input> 
+      </ion-item>
+
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="Quantidade" [(ngModel)]="quantidade"></ion-input>
+    </ion-item>
+   
+    <ion-item>
+      <ion-input type="text" rows={6} cols={20} placeholder="Informações do produto" [(ngModel)]="descricao"></ion-input>
+    </ion-item>
+    
+
+  </ion-list>
+
+</ion-content>

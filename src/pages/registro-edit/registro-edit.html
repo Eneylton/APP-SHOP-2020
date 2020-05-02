@@ -1,0 +1,120 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Registre-se</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content >
+  <ion-fab top right edge>
+    <button color="secondary" ion-fab mini (click)="editar()">
+      <ion-icon  name="md-checkmark"></ion-icon>
+    </button>
+  </ion-fab>
+  
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-8>
+        <ion-item>
+          <ion-input placeholder="Nome" [(ngModel)]="nome" type="text"></ion-input>
+        </ion-item>
+        
+      </ion-col>
+
+      <ion-col col-12>
+        <ion-item>
+          <ion-input placeholder="Email" [(ngModel)]="email" type="text"></ion-input>
+        </ion-item>
+       
+      </ion-col>
+
+     
+    </ion-row>
+
+    <ion-row>
+      <ion-list radio-group [(ngModel)]="avatar">
+        <ion-grid>
+          <ion-row>
+            <ion-col col="3">
+              <ion-item>
+                <ion-label><img src="../../assets/imgs/01.png" alt=""></ion-label>
+                <ion-radio value="../../assets/imgs/01.png" checked></ion-radio>
+              </ion-item>
+            </ion-col>
+            <ion-col col="3">
+              <ion-item>
+                <ion-label><img src="../../assets/imgs/02.png" alt=""></ion-label>
+                <ion-radio value="../../assets/imgs/02.png" ></ion-radio>
+              </ion-item>
+            </ion-col>
+            <ion-col col="3">
+              <ion-item>
+                
+                <ion-label><img src="../../assets/imgs/05.png" alt=""></ion-label>
+                <ion-radio value="../../assets/imgs/05.png" ></ion-radio>
+              </ion-item>
+            </ion-col>
+          
+          </ion-row>
+          </ion-grid>
+      </ion-list>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>
+        <ion-list>
+          <ion-item style="margin-left: 1px;">
+            <ion-label>Tipo</ion-label>
+            <ion-select [(ngModel)]="tipo">
+              <ion-option value="Cliente">Cliente</ion-option>
+              <ion-option value="Loja">Loja</ion-option>
+              
+            </ion-select>
+          </ion-item>
+        </ion-list>
+        
+      </ion-col>
+
+
+    </ion-row>
+    <ion-label>
+      
+      <ion-item-divider style="background-color: rgb(133, 240, 240) !important;" color="dark">Cadastre sua senha</ion-item-divider>
+    </ion-label>
+
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-input placeholder="Login" [(ngModel)]="login" type="text"></ion-input>
+        </ion-item>
+        
+      </ion-col>
+     
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col col-6>
+        <ion-item>
+          <ion-input placeholder="Senha" [(ngModel)]="senha" type="password"></ion-input>
+        </ion-item>
+        
+      </ion-col>
+
+      <ion-col col-6>
+        <ion-item>
+          <ion-input placeholder="Confirma" [(ngModel)]="confirma" type="password"></ion-input>
+        </ion-item>
+        
+      </ion-col>
+
+    </ion-row>
+
+  
+  </ion-grid>
+
+
+
+</ion-content>

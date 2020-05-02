@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Entre em Cotato</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card  *ngFor="let pedido of pedidos">
+    <ion-card-header>
+      <img src="{{url+pedido.foto}}" alt="">
+      <p>{{pedido.nome}}</p> 
+      <p>{{pedido.website}}</p> 
+      <p>{{pedido.preco  | currency : 'R$ '}}</p> 
+      <p>{{pedido.descricao}}</p> 
+      <p>{{pedido.data}}</p> 
+    </ion-card-header>
+    <ion-card-content>
+      {{pedido.email}}
+     <p>{{pedido.tel}}</p> 
+     <p>{{pedido.facebook}}</p> 
+     <p>{{pedido.hist}}</p> 
+     <p>{{pedido.whatsapp}}</p> 
+     <p>{{pedido.endereco}}</p> 
+     <p>{{pedido.numero}}</p> 
+     <p>{{pedido.bairro}}</p> 
+     <p>{{pedido.cidade}}</p> 
+     <p>{{pedido.estado}}</p> 
+     <p>{{pedido.cep}}</p> 
+     
+     
+   
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

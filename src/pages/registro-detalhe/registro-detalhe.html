@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Detalhes da Conta</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+
+
+    <ion-row>
+
+
+      <ion-col col-12>
+        <div style="text-align: center;">
+          <img style="width:150px; height: 150px;" src="{{avatar}}"></div>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col col-12>
+
+        <h1>
+          <div style="text-align: center;">
+
+            <ion-icon class="fa-eercast"></ion-icon> {{nome}}
+          </div>
+
+        </h1>
+
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col col-12>
+            
+          <ion-icon class="fa-envelope-open "></ion-icon>   
+       
+
+        <span style="font-size: 20px;">{{email}}</span> 
+
+      </ion-col>
+
+
+      <ion-col col-12>
+
+        <ion-icon class="fa-address-card "></ion-icon>   
+
+        <span style="font-size: 15px;">{{tipo}}</span> 
+
+      </ion-col>
+
+
+    </ion-row>
+
+
+  </ion-grid>
+
+
+</ion-content>
